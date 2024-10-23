@@ -21,3 +21,7 @@ numpy = 1.21.1
 # Reference
 
 This repository is based on:  
+GRAPPA:  
+RAKI:  
+rRAKI:  
+ReconFormer:  
