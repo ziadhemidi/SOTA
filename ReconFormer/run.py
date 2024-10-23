@@ -23,9 +23,9 @@ class configs:
 
     def __init__(self):
 
-        self.snap_path = “”
-        self.datapath = “”
-        self.eval_path = “”
+        self.snap_path = ""
+        self.datapath = ""
+        self.eval_path = ""
         if not os.path.exists(self.snap_path):
             os.makedirs(self.snap_path)
 
