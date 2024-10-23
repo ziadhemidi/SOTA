@@ -1,10 +1,10 @@
 import os
 import data
 import utils
-from models.Recurrent_Transformer import ReconFormer
 import torch
 import numpy as np
 import transforms
+from models.Recurrent_Transformer import ReconFormer
 
 
 class configs:
@@ -23,9 +23,9 @@ class configs:
 
     def __init__(self):
 
-        self.snap_path = os.path.join("result_1", self.data_type, "scale=%d" % self.down_scale)
-        self.datapath = 'G:\\dataset\\fastMRI_%s\\Reconstruction' % self.data_type
-        self.eval_path = os.path.join(self.datapath, "restored", "ReconFormer", "scale=%d" % self.down_scale)
+        self.snap_path = “”
+        self.datapath = “”
+        self.eval_path = “”
         if not os.path.exists(self.snap_path):
             os.makedirs(self.snap_path)
 
