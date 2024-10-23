@@ -1,4 +1,5 @@
-# Generalized_INR
+# Generalized_INR  
+Generalized Implicit Neural Representation for MRI Parallel Imaging Reconstruction
 
 ## requirements
 torch == 1.8.1  
