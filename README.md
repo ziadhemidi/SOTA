@@ -2,7 +2,7 @@
 
 ## requirements
 torch == 1.8.1  
-numpy == 1.19.5  
+numpy == 1.21.1  
 
 
 ## citation
