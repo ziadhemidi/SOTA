@@ -1,4 +1,4 @@
-# Generalized_INR  
+# Generalized INR  
 pytorch code for the paper ["Generalized Implicit Neural Representation for MRI Parallel Imaging Reconstruction"](http://)
 
 # Requirements  
