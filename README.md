@@ -9,7 +9,7 @@ numpy = 1.21.1
 ## 2. Dataset Preparation 
 Please prepare your dataset in the following structure for easy use of this repository:  
 
-We recommend you to write your own dataloader.
+We recommend you to write your own dataloader in `data.py`.
 
 
 ## 3. Run
