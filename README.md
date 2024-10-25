@@ -1,5 +1,5 @@
 # Generalized_INR  
-the pytorch implementation of out paper ["Generalized Implicit Neural Representation for MRI Parallel Imaging Reconstruction"](https://arxiv.org/abs/2309.06067)
+The pytorch implementation of our paper ["Generalized Implicit Neural Representation for MRI Parallel Imaging Reconstruction"](https://arxiv.org/abs/2309.06067)
 
 ![Overview_of_Generalized_INR](./multi_scale_recon/model.jpg)
 
@@ -36,10 +36,10 @@ numpy = 1.21.1
 
 This repository refers to:  
 
-Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](https://github.com/mckib2/pygrappa)]  
+Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](https://github.com/mckib2/pygrappa)] and [[paper]()]  
 
-Scan‐specific Robust Artificial‐Neural‐Networks for K‐space Interpolation (RAKI) Reconstruction: Database‐free Deep Learning for Fast Imaging [[code](https://github.com/zczam/RAKI)]  
+Scan‐specific Robust Artificial‐Neural‐Networks for K‐space Interpolation (RAKI) Reconstruction: Database‐free Deep Learning for Fast Imaging [[code](https://github.com/zczam/RAKI)] and [[paper]()]  
 
-Residual RAKI: A Hybrid Linear and Non-linear Approach for Scan-specific K-space Deep Learning [[code](https://github.com/zczam/rRAKI)]  
+Residual RAKI: A Hybrid Linear and Non-linear Approach for Scan-specific K-space Deep Learning [[code](https://github.com/zczam/rRAKI)] and [[paper]()]  
 
-ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer [[code](https://github.com/guopengf/ReconFormer)]  
+ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer [[code](https://github.com/guopengf/ReconFormer)] and [[paper]()]  
