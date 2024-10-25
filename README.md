@@ -30,7 +30,10 @@ We recommend you to write your own `dataloader` in `data.py`.
 ## 3. Run
 
 **GRAPPA:**  
-To run GRAPPA, you should firstly specify the file path in `./GRAPPA/run.py` and then run `./GRAPPA/run.py`.
+To run GRAPPA, you should firstly specify the file path in `./GRAPPA/run.py`:
+```
+python GRAPPA/run.py
+```
 
 **RAKI:**  
 To run RAKI, you should firstly specify the configurations in `./RAKI/run.py` and then run `./RAKI/run.py`.
