@@ -1,8 +1,6 @@
 # Generalized_INR  
 The pytorch implementation of our paper ["Generalized Implicit Neural Representation for MRI Parallel Imaging Reconstruction"](https://arxiv.org/abs/2309.06067)
 
-![Overview_of_Generalized_INR](./multi_scale_recon/model.jpg)
-
 # Requirements  
 python = 3.8  
 torch = 1.8.1  
