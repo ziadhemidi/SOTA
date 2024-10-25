@@ -25,7 +25,7 @@ your_data_path
 			└── ...
 
 ```
-We recommend you to write your own `dataloader` in `data.py`.
+We recommend you to write your own `dataloader` in `data.py` for convient processing.
 
 
 ## 3. Run
