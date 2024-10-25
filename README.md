@@ -1,22 +1,22 @@
 # Generalized_INR  
 The pytorch implementation of our paper ["Generalized Implicit Neural Representation for MRI Parallel Imaging Reconstruction"](https://arxiv.org/abs/2309.06067)
 
-## 1.Requirements  
+## 1. Requirements  
 python = 3.8  
 torch = 1.8.1  
 numpy = 1.21.1  
 
-## 2.Dataset Preparation 
+## 2. Dataset Preparation 
 
-## 3.Run
+## 3. Run
 
-## 4.Citation  
+## 4. Citation  
 If you find this repository helpful in your work, please cite:
 ```bash
 
 ```
 
-## 5.Reference
+## 5. Reference
 This repository refers to:  
 
 Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](https://github.com/mckib2/pygrappa)] and [[paper](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.10171)]  
