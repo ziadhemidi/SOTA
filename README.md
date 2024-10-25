@@ -30,6 +30,7 @@ We recommend you to write your own `dataloader` in `data.py`.
 ## 3. Run
 
 **GRAPPA**  
+To achieve GRAPPA, you should specify the data path in `GRAPPA/run.py` and then run `GRAPPA/run.py`.
 
 **RAKI**  
 
