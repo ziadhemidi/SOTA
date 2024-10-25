@@ -35,7 +35,11 @@ numpy = 1.21.1
 # Reference
 
 This repository refers to:  
-Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA)  
+
+Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) 
+
 Scan‐specific Robust Artificial‐Neural‐Networks for K‐space Interpolation (RAKI) Reconstruction: Database‐free Deep Learning for Fast Imaging  
+
 Residual RAKI: A Hybrid Linear and Non-linear Approach for Scan-specific K-space Deep Learning  
+
 ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer 
