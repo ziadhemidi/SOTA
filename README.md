@@ -16,7 +16,7 @@ We recommend you to write your own `dataloader` in `data.py`.
 
 ## 3. Run
 
-## GRAPPA ##
+** GRAPPA **
 
 ## 4. Citation  
 If you find this repository helpful in your work, please cite:
