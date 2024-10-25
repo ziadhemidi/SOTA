@@ -36,16 +36,28 @@ python GRAPPA/run.py
 ```
 
 **RAKI:**  
-To run RAKI, you should firstly specify the configurations in `./RAKI/run.py` and then run `./RAKI/run.py`.
+To run RAKI, you should firstly specify the configurations in `./RAKI/run.py`:
+```
+python RAKI/run.py
+```
 
 **rRAKI:**  
-To run rRAKI, you should firstly specify the configurations in `./rRAKI/run.py` and then run `./rRAKI/run.py`.
+To run rRAKI, you should firstly specify the configurations in `./rRAKI/run.py`:
+```
+python rRAKI/run.py
+```
 
 **ReconFormer:**  
-To run ReconFormer, you should firstly specify the configurations in `./ReconFormer/run.py` and then run `./ReconFormer/run.py`.
+To run ReconFormer, you should firstly specify the configurations in `./ReconFormer/run.py`:
+```
+python ReconFormer/run.py
+```
 
 **Generalized_INR:**  
-To run our model, you should firstly specify the configurations in `./multi_scale_recon/configs.py` and then run `./multi_scale_recon/run.py`.
+To run our model, you should firstly specify the configurations in `./multi_scale_recon/configs.py`:
+```
+python multi_scale_recon/run.py
+```
 
 ## 4. Citation  
 If you find this repository helpful in your work, please cite:
