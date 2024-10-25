@@ -36,7 +36,7 @@ numpy = 1.21.1
 
 This repository refers to:  
 
-Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code]()]  
+Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](https://github.com/mckib2/pygrappa)]  
 
 Scan‐specific Robust Artificial‐Neural‐Networks for K‐space Interpolation (RAKI) Reconstruction: Database‐free Deep Learning for Fast Imaging [[code]()]  
 
