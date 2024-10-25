@@ -7,7 +7,9 @@ torch = 1.8.1
 numpy = 1.21.1  
 
 ## 2. Dataset Preparation 
-Please prepare your dataset in the following structure for easy use of this repository:
+Please prepare your dataset in the following structure for easy use of this repository:  
+
+We recommend you to write your own dataloader.
 
 
 ## 3. Run
