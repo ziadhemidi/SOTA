@@ -30,15 +30,19 @@ We recommend you to write your own `dataloader` in `data.py`.
 ## 3. Run
 
 **GRAPPA**  
-To achieve GRAPPA, you should specify the data path in `GRAPPA/run.py` and then run `GRAPPA/run.py`.
+To run GRAPPA, you should specify the data path in `GRAPPA/run.py` and then run `GRAPPA/run.py`.
 
 **RAKI**  
+To run RAKI, you should specify the configurations in `RAKI/run.py` and then run `RAKI/run.py`.
 
 **rRAKI**  
+To run rRAKI, you should specify the configurations in `rRAKI/run.py` and then run `rRAKI/run.py`.
 
 **ReconFormer**  
+To run ReconFormer, you should specify the configurations in `ReconFormer/run.py` and then run `ReconFormer/run.py`.
 
 **Generalized_INR**
+To run our model, you should specify the configurations in `multi_scale_recon/run.py` and then run `multi_scale_recon/run.py`.
 
 ## 4. Citation  
 If you find this repository helpful in your work, please cite:
