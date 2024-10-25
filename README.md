@@ -28,7 +28,7 @@ numpy = 1.21.1
 ```
 
 # Citation  
-If this repository is helpful for your work, please cite:
+If this repository is helpful to your work, please cite:
 ```bash
 
 ```
