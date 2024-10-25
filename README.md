@@ -23,7 +23,6 @@ your_data_path
         		├── xxx.npz
 			├── ...
 			└── ...
-
 ```
 We recommend you to write your own `dataloader` in `data.py`.
 
