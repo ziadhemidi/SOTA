@@ -9,6 +9,8 @@ numpy = 1.21.1
 ## 2. Dataset Preparation 
 Please prepare your dataset as the following format:
 
+where all the npz files have a archive named "fullysampled_kspace" with the shape of (num_coils, height, width). 
+
 ## 3. Run
 
 ## 4. Citation  
