@@ -10,19 +10,19 @@ numpy = 1.21.1
 Please prepare your dataset in the following structure for easy use of this repository:  
 ```
 your_data_path
-└── fastMRI_brain
-    ├── train
-        ├── xxx.npz
-	├── ...
-	└── xxx.npz
-    └── val
-        ├── xxx.npz
-	├── ...
-	└── xxx.npz
-    └── test
-        ├── xxx.npz
-	├── ...
-	└── xxx.npz
+	└── fastMRI_brain
+    		├── train
+        		├── xxx.npz
+			├── ...
+			└── xxx.npz
+    		├── val
+        		├── xxx.npz
+			├── ...
+			└── xxx.npz
+    		└── test
+        		├── xxx.npz
+			├── ...
+			└── xxx.npz
 
 ```
 We recommend you to write your own `dataloader` in `data.py`.
