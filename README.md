@@ -41,7 +41,7 @@ To run rRAKI, you should specify the configurations in `rRAKI/run.py` and then r
 **ReconFormer**  
 To run ReconFormer, you should specify the configurations in `ReconFormer/run.py` and then run `ReconFormer/run.py`.
 
-**Generalized_INR**
+**Generalized_INR**  
 To run our model, you should specify the configurations in `multi_scale_recon/run.py` and then run `multi_scale_recon/run.py`.
 
 ## 4. Citation  
