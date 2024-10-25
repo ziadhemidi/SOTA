@@ -40,6 +40,6 @@ Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](htt
 
 Scan‐specific Robust Artificial‐Neural‐Networks for K‐space Interpolation (RAKI) Reconstruction: Database‐free Deep Learning for Fast Imaging [[code](https://github.com/zczam/RAKI)]  
 
-Residual RAKI: A Hybrid Linear and Non-linear Approach for Scan-specific K-space Deep Learning [[code]()]  
+Residual RAKI: A Hybrid Linear and Non-linear Approach for Scan-specific K-space Deep Learning [[code](https://github.com/zczam/rRAKI)]  
 
 ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer [[code]()]  
