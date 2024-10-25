@@ -11,7 +11,7 @@ Please prepare your dataset in the following structure for easy use of this repo
 
 
 
-We recommend you to write your own dataloader in `data.py`.
+We recommend you to write your own `dataloader` in `data.py`.
 
 
 ## 3. Run
