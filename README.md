@@ -9,21 +9,6 @@ numpy = 1.21.1
 ## Dataset Preparation 
 
 ## Run
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
-```bash
-
-```
 
 ## Citation  
 If you find this repository helpful in your work, please cite:
