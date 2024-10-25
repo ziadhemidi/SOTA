@@ -28,12 +28,12 @@ numpy = 1.21.1
 ```
 
 # Citation  
+If this repository is helpful for your work, please cite:
 ```bash
 
 ```
 
 # Reference
-
 This repository refers to:  
 
 Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](https://github.com/mckib2/pygrappa)] and [[paper](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.10171)]  
