@@ -30,7 +30,7 @@ We recommend you to write your own `dataloader` in `data.py`.
 ## 3. Run
 
 **GRAPPA:**  
-To run GRAPPA, you should firstly specify the file path in `./GRAPPA/run.py`:
+To run GRAPPA, you should firstly specify the configurations in `./GRAPPA/run.py`:
 ```
 python GRAPPA/run.py
 ```
@@ -52,7 +52,7 @@ To run IMJENSE, you should firstly specify the configurations in `./IMJENSE/run.
 ```
 python IMJENSE/run.py
 ```
-Note that training IMJENSE has special environment requirements, please refer to the [[original code](https://github.com/AMRI-Lab/IMJENSE)] for more details
+Note that training IMJENSE has special environment requirements, please refer to the [[original code](https://github.com/AMRI-Lab/IMJENSE)] for more details.  
 
 **ReconFormer:**  
 To run ReconFormer, you should firstly specify the configurations in `./ReconFormer/run.py`:
