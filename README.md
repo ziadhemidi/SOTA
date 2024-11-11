@@ -62,7 +62,15 @@ python multi_scale_recon/run.py
 ## 4. Citation  
 If you find this repository helpful in your work, please cite:
 ```bash
-
+@misc{li2024implicitneuralrepresentationmri,
+      title={Implicit Neural Representation for MRI Parallel Imaging Reconstruction}, 
+      author={Hao Li and Yusheng Zhou and Jianan Liu and Xiling Liu and Tao Huang and Zhihan Lv and Weidong Cai},
+      year={2024},
+      eprint={2309.06067},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2309.06067}, 
+}
 ```
 
 ## 5. Reference
