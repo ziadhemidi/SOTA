@@ -47,6 +47,12 @@ To run rRAKI, you should firstly specify the configurations in `./rRAKI/run.py`:
 python rRAKI/run.py
 ```
 
+**IMJENSE:**  
+To run IMJENSE, you should firstly specify the configurations in `./IMJENSE/run.py`:
+```
+python IMJENSE/run.py
+```
+
 **ReconFormer:**  
 To run ReconFormer, you should firstly specify the configurations in `./ReconFormer/run.py`:
 ```
