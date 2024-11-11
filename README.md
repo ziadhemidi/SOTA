@@ -52,6 +52,7 @@ To run IMJENSE, you should firstly specify the configurations in `./IMJENSE/run.
 ```
 python IMJENSE/run.py
 ```
+Note that training IMJENSE has special environment requirements, please refer to the [[original code](https://github.com/AMRI-Lab/IMJENSE)] for more details
 
 **ReconFormer:**  
 To run ReconFormer, you should firstly specify the configurations in `./ReconFormer/run.py`:
