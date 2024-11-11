@@ -68,10 +68,12 @@ If you find this repository helpful in your work, please cite:
 ## 5. Reference
 This repository refers to:  
 
-Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](https://github.com/mckib2/pygrappa)] and [[paper](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.10171)]  
+1. Generalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) [[code](https://github.com/mckib2/pygrappa)] and [[paper](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.10171)]  
 
-Scan‐specific Robust Artificial‐Neural‐Networks for K‐space Interpolation (RAKI) Reconstruction: Database‐free Deep Learning for Fast Imaging [[code](https://github.com/zczam/RAKI)] and [[paper](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.27420)]  
+2. Scan‐specific Robust Artificial‐Neural‐Networks for K‐space Interpolation (RAKI) Reconstruction: Database‐free Deep Learning for Fast Imaging [[code](https://github.com/zczam/RAKI)] and [[paper](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.27420)]  
 
-Residual RAKI: A Hybrid Linear and Non-linear Approach for Scan-specific K-space Deep Learning [[code](https://github.com/zczam/rRAKI)] and [[paper](https://doi.org/10.1016/j.neuroimage.2022.119248)]  
+3. Residual RAKI: A Hybrid Linear and Non-linear Approach for Scan-specific K-space Deep Learning [[code](https://github.com/zczam/rRAKI)] and [[paper](https://doi.org/10.1016/j.neuroimage.2022.119248)]  
 
-ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer [[code](https://github.com/guopengf/ReconFormer)] and [[paper](https://ieeexplore.ieee.org/document/10251064)]  
+4. ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer [[code](https://github.com/guopengf/ReconFormer)] and [[paper](https://ieeexplore.ieee.org/document/10251064)]  
+
+
