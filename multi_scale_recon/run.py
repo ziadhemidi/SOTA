@@ -1,4 +1,6 @@
 import os
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import data
 import utils
 import configs
@@ -49,9 +51,11 @@ if __name__ == '__main__':
             optimizer.zero_grad()
 
             inputs, targets = next(train_loader)
-            pred_image = model(inputs['coords'].to(device),
-                               inputs['undersampled_image'].to(device),
-                               inputs['down_scale'].to(device) if config.scale_embed else None)
+            
+            with torch.amp.autocast('cuda', dtype=torch.bfloat16):
+                pred_image = model(inputs['coords'].to(device),
+                                inputs['undersampled_image'].to(device),
+                                inputs['down_scale'].to(device) if config.scale_embed else None).float()
             # image domain loss
             loss_image = loss_fn_1(pred_image, targets['image'].to(device))
 
@@ -117,9 +121,10 @@ if __name__ == '__main__':
 
                     image = targets['image'].to(device)
                     # output generated data
-                    pred_image = model(inputs['coords'].to(device),
-                                       inputs['undersampled_image'].to(device),
-                                       inputs['down_scale'].to(device) if config.scale_embed else None)
+                    with torch.amp.autocast('cuda', dtype=torch.bfloat16):
+                        pred_image = model(inputs['coords'].to(device),
+                                        inputs['undersampled_image'].to(device),
+                                        inputs['down_scale'].to(device) if config.scale_embed else None).float()
                     # evaluation metrics
                     eval_ssim += utils.ssim(pred_image, image).item()
                     eval_psnr += utils.psnr(pred_image, image).item()

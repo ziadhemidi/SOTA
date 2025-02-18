@@ -102,11 +102,11 @@ def create_grid_tensor(h, w, c=None):
     if c is not None:
         grid_z, grid_y, grid_x = torch.meshgrid([torch.linspace(-1, 1, steps=c),
                                                  torch.linspace(-1, 1, steps=h),
-                                                 torch.linspace(-1, 1, steps=w)])
+                                                 torch.linspace(-1, 1, steps=w)], indexing='ij')
         grid = torch.stack([grid_z, grid_y, grid_x], dim=-1)
     else:
         grid_y, grid_x = torch.meshgrid([torch.linspace(-1, 1, steps=h),
-                                         torch.linspace(-1, 1, steps=w)])
+                                         torch.linspace(-1, 1, steps=w)], indexing='ij')
         grid = torch.stack([grid_y, grid_x], dim=-1)
 
     return grid

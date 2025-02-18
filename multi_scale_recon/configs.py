@@ -1,5 +1,5 @@
 import os
-
+from pathlib import Path
 
 class config(object):
 
@@ -11,9 +11,9 @@ class config(object):
     is_eval = True
 
     # path
-    snap_path = ''
-    datapath = ''
-    eval_path = ''
+    snap_path = Path.home() / 'storage' / 'staff' / 'ziadalhajhemid' / 'projects' / 'CFMRIxRecon' / 'SOTA' / 'multi_scale_recon' / 'Model_logs'
+    datapath = Path.home() / 'storage' / 'datasets' / 'FastMRI' / 'knee' / 'multi_coil'
+    eval_path = Path.home() / 'storage' / 'staff' / 'ziadalhajhemid' / 'projects' / 'CFMRIxRecon' / 'SOTA' / 'multi_scale_recon' / 'results'
 
     # data params
     down_scale = (4, 5, 6, )              # MRI undersample scale
@@ -62,7 +62,7 @@ class config(object):
         if self.is_pre_combine:
             self.image_in_dim = 1
         else:
-            if 'brain' in self.datapath:
+            if 'brain' in self.datapath.as_posix():
                 self.image_in_dim = 16
                 self.image_size = 384
             else:

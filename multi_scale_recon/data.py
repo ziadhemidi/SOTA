@@ -65,11 +65,11 @@ class Dataset(data.Dataset):
 def get_dataloader(config, evaluation=False, shuffle=True, eval_scale=None):
 
     if not evaluation:
-        train_ds = Dataset(datapath=os.path.join(config.datapath, 'train'),
+        train_ds = Dataset(datapath=os.path.join(config.datapath, 'train_2Dslices'),
                            down_scale=config.down_scale,
                            keep_center=config.keep_center,
                            is_pre_combine=config.is_pre_combine)
-        val_ds = Dataset(datapath=os.path.join(config.datapath, 'val'),
+        val_ds = Dataset(datapath=os.path.join(config.datapath, 'val_2Dslices'),
                          down_scale=config.down_scale,
                          keep_center=config.keep_center,
                          is_pre_combine=config.is_pre_combine)
@@ -79,7 +79,7 @@ def get_dataloader(config, evaluation=False, shuffle=True, eval_scale=None):
         return train_loader, val_loader
     else:
         assert eval_scale is not None
-        eval_ds = Dataset(datapath=os.path.join(config.datapath, 'test'),
+        eval_ds = Dataset(datapath=os.path.join(config.datapath, 'test_2Dslices'),
                           down_scale=(eval_scale, ),
                           keep_center=config.keep_center,
                           is_pre_combine=config.is_pre_combine)

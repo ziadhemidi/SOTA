@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import data
 import utils
 import torch
@@ -26,6 +27,10 @@ class configs:
         self.snap_path = ""
         self.datapath = ""
         self.eval_path = ""
+        self.snap_path = Path.home() / 'storage' / 'staff' / 'ziadalhajhemid' / 'projects' / 'CFMRIxRecon' / 'SOTA' / 'ReconFormer' / 'Model_logs'
+        self.datapath = Path.home() / 'storage' / 'datasets' / 'FastMRI' / 'knee' / 'multi_coil'
+        self.eval_path = Path.home() / 'storage' / 'staff' / 'ziadalhajhemid' / 'projects' / 'CFMRIxRecon' / 'SOTA' / 'ReconFormer' / 'results'
+        
         if not os.path.exists(self.snap_path):
             os.makedirs(self.snap_path)
 
@@ -68,6 +73,7 @@ if __name__ == '__main__':
         optimizer.zero_grad()
 
         input, target, fname, mask, masked_kspace = next(train_loader)
+        #with torch.amp.autocast('cuda', dtype=torch.bfloat16):
         output = model(input.to(device), masked_kspace.to(device), mask.to(device))
 
         output = transforms.complex_abs(output)
@@ -90,6 +96,7 @@ if __name__ == '__main__':
                 ssim_eval, psnr_eval, loss_eval = 0, 0, 0
                 for i, batch in enumerate(val_loader):
                     input, target, fname, mask, masked_kspace = batch
+                    #with torch.amp.autocast('cuda', dtype=torch.bfloat16):
                     output = model(input.to(device), masked_kspace.to(device), mask.to(device))
 
                     output = transforms.complex_abs(output).unsqueeze(1)
@@ -126,6 +133,7 @@ if __name__ == '__main__':
         eval_ssim, eval_psnr = 0, 0
         for i, batch in enumerate(eval_loader):
             input, target, fname, mask, masked_kspace = batch
+            #with torch.amp.autocast('cuda', dtype=torch.bfloat16):
             output = model(input.to(device), masked_kspace.to(device), mask.to(device))
 
             output = transforms.complex_abs(output).unsqueeze(1)

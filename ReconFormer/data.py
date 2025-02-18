@@ -56,10 +56,10 @@ class Dataset(data.Dataset):
 def get_dataloader(config, evaluation=False, shuffle=True):
 
     if not evaluation:
-        train_ds = Dataset(datapath=os.path.join(config.datapath, 'train'),
+        train_ds = Dataset(datapath=os.path.join(config.datapath, 'train_2Dslices'),
                            down_scale=config.down_scale,
                            keep_center=config.keep_center)
-        val_ds = Dataset(datapath=os.path.join(config.datapath, 'val'),
+        val_ds = Dataset(datapath=os.path.join(config.datapath, 'val_2Dslices'),
                          down_scale=config.down_scale,
                          keep_center=config.keep_center)
 
@@ -67,7 +67,7 @@ def get_dataloader(config, evaluation=False, shuffle=True):
         val_loader = data.DataLoader(dataset=val_ds, batch_size=config.batch_size, pin_memory=True, shuffle=shuffle)
         return train_loader, val_loader
     else:
-        eval_ds = Dataset(datapath=os.path.join(config.datapath, 'test'),
+        eval_ds = Dataset(datapath=os.path.join(config.datapath, 'test_2Dslices'),
                           down_scale=config.down_scale,
                           keep_center=config.keep_center)
         eval_loader = data.DataLoader(dataset=eval_ds, batch_size=1, pin_memory=True, shuffle=False)
