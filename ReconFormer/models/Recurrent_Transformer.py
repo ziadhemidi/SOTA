@@ -2,13 +2,12 @@
 This source code is licensed under the MIT license found in the
 LICENSE file in the root directory of this source tree.
 """
-
+import sys
+sys.path.append('.')
 import torch
 from torch import nn
-import transforms
-from models.RS_attention import RPTL, PatchEmbed, PatchUnEmbed
-from torch.nn import functional as F
-import numpy as np
+import SOTA.ReconFormer.transforms as transforms
+from SOTA.ReconFormer.models.RS_attention import RPTL, PatchEmbed, PatchUnEmbed
 
 
 class DataConsistencyInKspace(nn.Module):
