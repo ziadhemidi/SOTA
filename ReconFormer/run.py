@@ -19,7 +19,7 @@ class configs:
 
     data_type = 'knee'
 
-    down_scale = 4
+    down_scale = (4, 6, 8, 10, )
     keep_center = 0.08
 
     def __init__(self):

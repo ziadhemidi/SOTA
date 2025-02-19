@@ -13,15 +13,16 @@ class Dataset(data.Dataset):
         self.down_scale = down_scale
         self.filepath, self.filename = utils.get_filepath(datapath)
         self.center_ratio = keep_center
-        self.mask = self.create_mask()
+        
 
     def create_mask(self):
-
+        # down scale choice
+        scale = np.random.choice(self.down_scale, 1)
         fullysampled_kspace = np.load(self.filepath[0])['fullysampled_kspace']
         idx_lower = int((1 - self.center_ratio) * fullysampled_kspace.shape[-1] / 2)
         idx_upper = int((1 + self.center_ratio) * fullysampled_kspace.shape[-1] / 2)
         mask = np.zeros_like(fullysampled_kspace[0], dtype=np.float32)
-        mask[..., ::self.down_scale] = 1
+        mask[..., ::scale[0]] = 1
         mask[..., idx_lower:idx_upper] = 1
 
         return np.stack((mask, mask), axis=-1)
@@ -30,6 +31,7 @@ class Dataset(data.Dataset):
         return len(self.filepath)
 
     def __getitem__(self, item):
+
         # fully sampled kspace
         fullysampled_kspace = np.load(self.filepath[item])['fullysampled_kspace']
         # fully sampled image
@@ -38,7 +40,8 @@ class Dataset(data.Dataset):
 
         kspace = transforms.to_tensor(fullysampled_kspace)
         # Apply mask
-        mask = torch.from_numpy(self.mask)
+        mask = self.create_mask() # random mask
+        mask = torch.from_numpy(mask)
         masked_kspace = kspace * mask
         # Inverse Fourier Transform to get zero filled solution
         image = transforms.ifft2(masked_kspace)

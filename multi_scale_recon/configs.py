@@ -8,7 +8,7 @@ class config(object):
     batch_size = 2
 
     is_train = True
-    is_eval = True
+    is_eval = False
 
     # path
     snap_path = Path.home() / 'storage' / 'staff' / 'ziadalhajhemid' / 'projects' / 'CFMRIxRecon' / 'SOTA' / 'multi_scale_recon' / 'Model_logs'
@@ -16,18 +16,18 @@ class config(object):
     eval_path = Path.home() / 'storage' / 'staff' / 'ziadalhajhemid' / 'projects' / 'CFMRIxRecon' / 'SOTA' / 'multi_scale_recon' / 'results'
 
     # data params
-    down_scale = (4, 5, 6, )              # MRI undersample scale
-    eval_scale = (4, 5, 6, )
-    keep_center = 0.08
+    down_scale = (4, 6, 8, 10, )     # MRI undersample scale
+    eval_scale = (4, 6, 8, 10, )
+    keep_center = 0.08               # -> 8% ACS lines
 
     # train params
     n_iters = 100000                 # train iterations
     log_step = 100                   # log file record step
     val_step = 1000                  # validation step
-    load_checkpoint = False         # load checkpoint
+    load_checkpoint = False          # load checkpoint
 
     # optimizer params
-    lr = 1e-3                       # learning rate
+    lr = 1e-3                        # learning rate
     beta1 = 0.9
     beta2 = 0.99
     weight_decay = 0.0

@@ -1,6 +1,6 @@
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 import data
 import utils
 import configs
@@ -57,7 +57,7 @@ if __name__ == '__main__':
                                 inputs['undersampled_image'].to(device),
                                 inputs['down_scale'].to(device) if config.scale_embed else None).float()
             # image domain loss
-            loss_image = loss_fn_1(pred_image, targets['image'].to(device))
+            loss_image = loss_fn_1(pred_image, targets['image'].to(device)) # supervised
 
             loss_image.backward()
             optimizer.step()
