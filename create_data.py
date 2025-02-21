@@ -1,9 +1,11 @@
 import argparse
+import random
+from pathlib import Path
+
 import h5py
 import numpy as np
-import random
 from tqdm import tqdm
-from pathlib import Path
+
 
 def fft(img):
     kspace = np.fft.fftshift(np.fft.fftn(np.fft.ifftshift(img, axes=(-2, -1)), axes=(-2, -1)), axes=(-2, -1))
@@ -56,10 +58,13 @@ def extract_random_slices(input_dir, output_dir, num_slices=5, crop_shape=(320, 
             num_available_slices = kspace.shape[0]  # Assuming shape (slices, channels, height, width)
             
             if num_available_slices < num_slices:
-                print(f"Skipping {file} (not enough slices, found {num_available_slices})")
-                continue
+                print(f"For {file} (not enough slices, found {num_available_slices}) changing num_slices from {num_slices} to {num_available_slices}")
+                slices_pick = num_available_slices
+            else: 
+                slices_pick = num_slices
             
-            selected_slices = random.sample(range(num_available_slices), num_slices)
+            selected_slices = random.sample(range(num_available_slices), slices_pick)
+
             
             for i, slice_idx in enumerate(selected_slices):
                 slice_data = kspace[slice_idx]
@@ -74,7 +79,7 @@ def extract_random_slices(input_dir, output_dir, num_slices=5, crop_shape=(320, 
                 
                 np.savez_compressed(output_path, fullysampled_kspace=slice_data)
                 
-                print(f"Saved slice {i+1}/{num_slices} from {file} to {output_path} with shape {slice_data.shape}")
+                print(f"Saved slice {i+1}/{slices_pick} from {file} to {output_path} with shape {slice_data.shape}")
 
 if __name__ == "__main__":
 
@@ -83,7 +88,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_slices", type=int, default=5)
     
     args = parser.parse_args()
-  
+
     input_directory = Path.home() / "storage/datasets/FastMRI/knee/multi_coil" / Path(args.mode)
     output_directory = Path.home() / "storage/datasets/FastMRI/knee/multi_coil" / Path(args.mode + "_2Dslices")
     
@@ -92,4 +97,4 @@ if __name__ == "__main__":
         raise FileNotFoundError(f"Directory not found: {input_directory}")
     print(f"Extracting random slices from {input_directory} to {output_directory}...")
     
-    extract_random_slices(input_directory, output_directory, num_slices=args.num_slices)
+    extract_random_slices(input_directory, output_directory, num_slices=args.num_slices)    

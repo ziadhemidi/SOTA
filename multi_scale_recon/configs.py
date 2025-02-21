@@ -1,14 +1,15 @@
 import os
 from pathlib import Path
 
+
 class config(object):
 
     # hardware
     device = 'cuda:0'                  # device: cpu, cuda:0, cuda:1 and so on
     batch_size = 2
 
-    is_train = True
-    is_eval = False
+    is_train = False
+    is_eval = True
 
     # path
     snap_path = Path.home() / 'storage' / 'staff' / 'ziadalhajhemid' / 'projects' / 'CFMRIxRecon' / 'SOTA' / 'multi_scale_recon' / 'Model_logs'
@@ -24,7 +25,7 @@ class config(object):
     n_iters = 100000                 # train iterations
     log_step = 100                   # log file record step
     val_step = 1000                  # validation step
-    load_checkpoint = False          # load checkpoint
+    load_checkpoint = True          # load checkpoint
 
     # optimizer params
     lr = 1e-3                        # learning rate

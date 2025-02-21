@@ -1,13 +1,14 @@
 import os
+
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
-import data
-import utils
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import configs
-import torch
+import data
 import numpy as np
+import torch
 from model import network
 
+import utils
 
 if __name__ == '__main__':
 
