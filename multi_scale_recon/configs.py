@@ -5,7 +5,7 @@ from pathlib import Path
 class config(object):
 
     # hardware
-    device = 'cuda:0'                  # device: cpu, cuda:0, cuda:1 and so on
+    device = 'cuda'                  # device: cpu, cuda:0, cuda:1 and so on
     batch_size = 2
 
     is_train = False
